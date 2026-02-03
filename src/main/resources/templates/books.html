@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Danh sách</title>
+</head>
+<body>
+    <h1>Danh sách</h1>
+
+    <a th:href="@{/books/add}">Thêm sách mới</a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tiêu đề</th>
+                <th>Tác giả</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}">1</td>
+                <td th:text="${book.title}">Tiêu đề sách</td>
+                <td th:text="${book.author}">Tác giả sách</td>
+                <td>
+                    <a th:href="@{|/books/edit/${book.id}|}">Sửa</a>
+
+                    <form th:action="@{|/books/${book.id}|}" method="post" style="display:inline">
+                        <input type="hidden" name="_method" value="delete" />
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                        <button type="submit">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+
+            <tr th:if="${#lists.isEmpty(books)}">
+                <td colspan="4">Không có sách nào</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

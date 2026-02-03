@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Thymeleaf</title>
+</head>
+<body>
+    <p th:text="${message}">Default message</p>
+    <p th:text="${student.name}">Tên sinh viên</p>
+    <p th:text="#{welcome}">Welcome default</p>
+    <a th:href="@{/home}">Trang chủ</a>
+</body>
+</html>
