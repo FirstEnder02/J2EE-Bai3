@@ -1,7 +1,8 @@
-package Springtrap.service;
+package springtrap.service;
 
-import Springtrap.model.Book;
 import java.util.List;
+
+import springtrap.model.Book;
 
 public interface BookService {
     List<Book> getAllBooks();

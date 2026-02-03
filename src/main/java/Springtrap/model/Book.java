@@ -1,4 +1,4 @@
-package Springtrap.model;
+package springtrap.model;
 
 public class Book {
     private int id;

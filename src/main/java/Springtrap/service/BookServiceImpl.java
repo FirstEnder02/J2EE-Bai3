@@ -1,7 +1,8 @@
-package Springtrap.service;
+package springtrap.service;
 
-import Springtrap.model.Book;
 import org.springframework.stereotype.Service;
+
+import springtrap.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,10 @@
-package Springtrap.controller;
+package springtrap.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import Springtrap.model.Book;
-import Springtrap.service.BookService;
+import springtrap.model.Book;
+import springtrap.service.BookService;
 
 import java.util.List;
 
